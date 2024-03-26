@@ -1,5 +1,7 @@
 .container {
   width: 100%;
+  max-width: 1380;
+  padding: 0 20px;
   margin: 0 auto;
 }
 .iland-navbar {
@@ -14,14 +16,14 @@
   font-family: "Inter", sans-serif;
   font-weight: 400;
   gap: 15px;
-  margin-left: 15px;
+  margin-left: 40px;
 }
 .navbar-collapse ul li a:hover {
   font-weight: 500;
 }
 .form-control {
   border-radius: 20px !important;
-  padding: 6px 10px 7px 18px !important;
+  padding: 6px 75px 7px 18px !important;
 }
 .form-control:focus {
   outline: 0 !important;
@@ -32,11 +34,12 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  bottom: 30px;
-  padding-bottom: 50px;
+  /* bottom: 30px; */
+  padding-bottom: 100px;
 }
 .banner-left {
   width: 60%;
+  margin-top: 75px;
 }
 .banner-left h1 {
   font-family: "Montserrat", sans-serif;
@@ -46,6 +49,7 @@
 .banner-left p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  padding-top: 30px;
 }
 .banner-image {
   width: 60%;
@@ -55,15 +59,17 @@
   max-height: 250px;
   width: 100%;
   object-fit: contain;
+  margin-top: 30px;
 }
 .banner-right {
   width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 75px;
 }
 .banner-right img {
-  max-height: 150px;
+  max-height: 200px;
 }
 .branches-title {
   font-family: "Inter", sans-serif;
@@ -112,8 +118,8 @@
   background-color: #a0ecd3;
   height: 300px;
 }
-.our-latst-prdct{
-    font-family: "Montserrat", sans-serif;
+.our-latst-prdct {
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   padding-bottom: 20px;
 }
@@ -126,18 +132,18 @@
   border: 1px solid #797979;
   border-radius: 12px;
   padding: 33px 30px 18px 30px;
-  min-height: 480px;
 }
 .latst-product a {
   text-decoration: none;
 }
-
+.latstpro-img{
+    height: 160px;
+}
 .latstpro-img img {
   object-fit: cover;
+  width: 140px;
 }
-.latstpro-img {
-    min-height: 300px;
-}
+
 .latstpro-title h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -227,7 +233,6 @@
 }
 .pro-img {
   width: 250px;
-  height: 200px;
   padding-top: 20px;
 }
 .pro-img:hover {
@@ -248,7 +253,14 @@
   );
   padding-bottom: 80px;
 }
-
+.lst-chs-slider{
+    background: radial-gradient(
+    169.84% 509.04% at -32.64% 50.06%,
+    #b5e8d7 0%,
+    #ffffff 44.95%,
+    #b5e8d7 100%
+  );
+}
 .mySlides {
   display: none;
 }
@@ -313,6 +325,18 @@ img {
     opacity: 1;
   }
 }
+.d-flex{
+    position: relative;
+}
+.search-icon{
+    position: absolute;
+    position: absolute;
+    left: 236px;
+    border: none;
+    background: white;
+    top: 5px;
+    color: #BEBEBE;
+}
 
 .autoslid-section {
   display: flex;
@@ -328,7 +352,6 @@ img {
   /* width: 350px; */
   width: 70%;
   object-fit: cover;
-  
 }
 .airpod-pro-btn {
   border-radius: 6px;
@@ -480,8 +503,42 @@ img {
 .next-btn {
   right: 10px;
 }
+.test-wraper {
+  display: flex;
+  justify-content: space-between;
+}
+.test1 {
+  border: 1px solid #797979;
+  border-radius: 15px;
+  background-color: #26b88a;
+}
+.nw-prdct-sctn {
+  border: 1px solid #797979;
+  border-radius: 25px;
+  padding: 20px 20px 20px 20px;
+}
+.nw-prdct-sctn img {
+  width: 180px;
+}
+.prodct-name p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 30px 0 20px 0;
+}
 
 /* Responsive */
+
+@media only screen and (max-width: 1400px) and (min-width: 1200px) {
+  .navbar-collapse ul li a {
+    margin-left: 29px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .navbar-collapse ul li a {
+    margin-left: 15px;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   .banner-wraper {
@@ -490,28 +547,28 @@ img {
   }
   .banner-left {
     width: 100%;
+    margin-top: 0;
   }
   .banner-left h1 {
     line-height: 65px;
   }
   .banner-right {
     width: 100%;
-    padding-top: 70px;
+    padding-top: 40px;
   }
-  .ornge-watch{
+  .ornge-watch {
     width: 300px;
     height: auto !important;
   }
-  .banner-image{
+  .banner-image {
     width: 90%;
   }
- 
 }
 
 @media screen and (max-width: 991px) {
   .product-card {
     flex: 0 0 50%; /* 2 cards visible at a time */
-    max-width: 50%;
+    /* max-width: 50%; */
   }
 }
 
@@ -525,70 +582,86 @@ img {
     flex-direction: column;
     align-items: center;
   }
-  .iland-Product{
+  .iland-Product {
     width: 100%;
   }
-  .copyright-section{
+  .copyright-section {
     flex-direction: column;
     align-items: center;
   }
-  .ftr-contact{
+  .ftr-contact {
     flex-direction: column;
     align-items: center;
   }
-  .phone-section{
+  .phone-section {
     padding-top: 15px;
     padding-left: 0;
   }
-
- 
-
-
+}
+@media screen and (max-width: 600px) {
+    .latst-product{
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width: 420px) {
+    .latst-product{
+        width: 70%;
+        margin-left: 15%;
+        padding: 20px 19px 12px 21px;
+    }
+    .latstpro-img img{
+        width: 140px;
+    }
 }
 @media screen and (max-width: 1040px) {
-    .autoslid-section{
-        padding: 50px 35px;
-      }
+  .autoslid-section {
+    padding: 50px 35px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .form-control {
+    padding: 6px 10px 7px 18px !important;
+  }
+  .search-icon{
+    left: 180px;
+  }
 }
 
-@media only screen and (max-width: 770px) and (min-width: 650px)  {
-.right-prdct-img img{
+@media only screen and (max-width: 770px) and (min-width: 650px) {
+  .right-prdct-img img {
     width: 100%;
-}
+  }
 }
 @media screen and (max-width: 650px) {
-.autoslid-section{
+  .autoslid-section {
     flex-direction: column;
     align-items: center;
-}
-.right-prdct-img img{
+  }
+  .right-prdct-img img {
     width: 100%;
-}
-.right-prdct-img{
+  }
+  .right-prdct-img {
     margin-top: 60px;
-}
-.color-defne-section{
+  }
+  .color-defne-section {
     width: 60%;
-}
+  }
 }
 @media screen and (max-width: 845px) {
-    .ftr-cntents{
-        flex-wrap: wrap;
-    }
+  .ftr-cntents {
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 560px) {
-    .banner-left h1 {
-        font-size: 40px;
-        line-height: 55px;
-    }
-    .iphone-section h3{
-        font-size: 35px;
-    }
-    .ultra-txt{
-        height: 55px !important;
-    }
-
+  .banner-left h1 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+  .iphone-section h3 {
+    font-size: 35px;
+  }
+  .ultra-txt {
+    height: 55px !important;
+  }
 }
-
-
-
