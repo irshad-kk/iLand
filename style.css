@@ -4,9 +4,10 @@
   padding: 0 20px;
   margin: 0 auto;
 }
+
 .iland-navbar {
-  background-image: linear-gradient(#a0ecd3, #ffffff);
   padding: 20px 0 100px 0;
+  /* background: linear-gradient(180deg, #B5E8D7 40.26%, #FFFFFF 103.46%); */
 }
 .iland-home-logo {
   width: 20%;
@@ -35,7 +36,7 @@
   justify-content: space-between;
   position: relative;
   /* bottom: 30px; */
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 .banner-left {
   width: 60%;
@@ -59,7 +60,7 @@
   max-height: 250px;
   width: 100%;
   object-fit: contain;
-  margin-top: 30px;
+  margin-top: 20%;
 }
 .banner-right {
   width: 40%;
@@ -220,8 +221,6 @@
   );
 
   background-repeat: no-repeat;
-  height: auto;
-  width: 40%;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 50px;
@@ -232,12 +231,12 @@
   padding-right: 10px;
 }
 .pro-img {
-  width: 250px;
+  width: 60%;
   padding-top: 20px;
 }
 .pro-img:hover {
-  width: 230px;
-  padding-bottom: 20px;
+  width: 55%;
+  padding-bottom: 5%;
 }
 .iland-Product h5 {
   padding-top: 40px;
@@ -330,7 +329,6 @@ img {
 }
 .search-icon{
     position: absolute;
-    position: absolute;
     left: 236px;
     border: none;
     background: white;
@@ -340,6 +338,7 @@ img {
 
 .autoslid-section {
   display: flex;
+  align-items: center;
   padding: 50px 2px;
 }
 .left-prdct-dtls {
@@ -349,8 +348,7 @@ img {
   width: 50%;
 }
 .right-prdct-img img {
-  /* width: 350px; */
-  width: 70%;
+  width: 50%;
   object-fit: cover;
 }
 .airpod-pro-btn {
@@ -526,8 +524,32 @@ img {
   font-size: 17px;
   padding: 30px 0 20px 0;
 }
+#scd-frm{
+  display: none !important;
+}
+
+.swiper-button-next:after{
+  font-size: 20px !important;
+  
+}
+.swiper-button-prev:after{
+  font-size: 20px !important;
+
+}
+#cnct-only{
+  display: none;
+}
 
 /* Responsive */
+@media only screen and (min-width: 992px) {
+
+  .iland-navbar {
+    background: linear-gradient(180deg, #B5E8D7 40.26%, #FFFFFF 103.46%)  }
+    .our-latst-prdct{
+      padding-top: 10%;
+    }
+}
+
 
 @media only screen and (max-width: 1400px) and (min-width: 1200px) {
   .navbar-collapse ul li a {
@@ -541,20 +563,83 @@ img {
 }
 
 @media only screen and (max-width: 992px) {
+  .menu-banner-wraper{
+    background: linear-gradient(180deg, #B5E8D7 40.26%, #FFFFFF 103.46%);
+    height: 100vh;
+  
+  }
+
+  #scd-frm{
+    display: block !important;
+    width: 80%;
+  }
+  #frst-frm{
+    display: none !important;
+  }
+  .cmpny-lg-right{
+    display: none;
+  }
+  .iland-navbar {
+    padding-top:35px;
+    /* background: #B5E8D7 !important; */
+    padding-bottom: 0px;
+  }
+  .iland-home-logo{
+    position: relative;
+    left: 40%;
+  }
+  button.navbar-toggler{
+    border: none;
+    position: relative;
+    right: 90%;
+  }
+  .branches-title{
+    padding: 0;
+    position: absolute;
+    left: 70%;
+    bottom: 104%;
+    font-size: 10px;
+  }
+  
   .banner-wraper {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
   .banner-left {
     width: 100%;
     margin-top: 0;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .banner-left p {
+    display: none;
   }
   .banner-left h1 {
-    line-height: 65px;
+    text-align: center;
+    padding-top: 15%;
+    
   }
+  .trusted-text{
+    display: none;
+  }
+  .branches-btn{
+    display: none;
+  }
+  .branch-list{
+    justify-content: space-around;
+    padding-top: 24px;
+    padding-bottom: 10px;
+  }
+  .branch-list h4{
+    font-size: 10px;
+  }
+  .branch-list p{
+    font-size: 10px;
+  }
+ 
   .banner-right {
     width: 100%;
-    padding-top: 40px;
+    margin-top: 0;
   }
   .ornge-watch {
     width: 300px;
@@ -571,6 +656,63 @@ img {
     /* max-width: 50%; */
   }
 }
+@media screen and (max-width: 768px) {
+  .banner-left h1{
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 535px) {
+  .our-latst-prdct{
+    text-align: center;
+    font-weight: 700;
+  }
+  .latst-product {
+    padding: 15px 11px 15px 13px;
+  }
+  .latstpro-img img {
+    width: 100px;
+  }
+  .latstpro-img{
+    height: 120px;
+  }
+  .latstpro-title h3{
+    font-size: 13px;
+  }
+  .latstpro-watsap p{
+    padding-left: 10px;
+  }
+  #cnct-us{
+    display: none;
+  }
+  #cnct-only{
+    display: block;
+  }
+  .latstpro-title h3{
+    padding: 13px 0 11px 0;
+  }
+}
+@media screen and (max-width: 494px) {
+  .banner-left h1{
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 435px) {
+  .banner-left h1{
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 378px) {
+  .banner-left h1{
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 290px) {
+  .ornge-watch{
+    width: 100%;
+  }
+}
+
+
 
 @media screen and (max-width: 770px) {
   .product-card {
@@ -578,13 +720,6 @@ img {
     max-width: 100%;
   }
 
-  .show-products {
-    flex-direction: column;
-    align-items: center;
-  }
-  .iland-Product {
-    width: 100%;
-  }
   .copyright-section {
     flex-direction: column;
     align-items: center;
@@ -598,22 +733,13 @@ img {
     padding-left: 0;
   }
 }
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .latst-product{
         width: 60%;
         margin-left: 20%;
     }
-}
-@media screen and (max-width: 420px) {
-    .latst-product{
-        width: 70%;
-        margin-left: 15%;
-        padding: 20px 19px 12px 21px;
-    }
-    .latstpro-img img{
-        width: 140px;
-    }
-}
+} */
+
 @media screen and (max-width: 1040px) {
   .autoslid-section {
     padding: 50px 35px;
@@ -628,24 +754,52 @@ img {
   }
 }
 
-@media only screen and (max-width: 770px) and (min-width: 650px) {
-  .right-prdct-img img {
-    width: 100%;
-  }
-}
 @media screen and (max-width: 650px) {
-  .autoslid-section {
-    flex-direction: column;
-    align-items: center;
-  }
-  .right-prdct-img img {
-    width: 100%;
-  }
   .right-prdct-img {
     margin-top: 60px;
   }
   .color-defne-section {
     width: 60%;
+  }
+  .prdct-descrptn{
+    display: none;
+  }
+  .left-prdct-dtls h4{
+    padding-top: 13px;
+    font-size: 17px;
+  }
+  .airpod-pro-btn{
+    font-size: 14px;
+  }
+  .right-prdct-img img{
+    width: 80% ;
+  }
+  .clr1{
+    height: 15px;
+    width: 15px;
+  }
+  .clr2{
+    height: 15px;
+    width: 15px;
+  }
+  .clr3{
+    height: 15px;
+    width: 15px;
+  }
+  .clr4{
+    height: 15px;
+    width: 15px;
+  }
+  .clr5{
+    height: 15px;
+    width: 15px;
+  }
+  .clr6{
+    height: 15px;
+    width: 15px;
+  }
+  .iphone-section{
+    padding: 60px 0;
   }
 }
 @media screen and (max-width: 845px) {
@@ -654,14 +808,14 @@ img {
   }
 }
 @media screen and (max-width: 560px) {
-  .banner-left h1 {
-    font-size: 40px;
-    line-height: 55px;
-  }
+  
   .iphone-section h3 {
-    font-size: 35px;
+    font-size: 30px;
   }
   .ultra-txt {
     height: 55px !important;
+  }
+  .iland-Product h5{
+    font-size: 17px;
   }
 }
