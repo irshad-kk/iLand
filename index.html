@@ -578,9 +578,12 @@
     </footer>
 
     <script>
+
       $(document).ready(function () {
+      setTimeout(function() {
         $(".preloader").fadeOut();
-      });
+      }, 1500);
+    });
 
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
