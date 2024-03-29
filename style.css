@@ -651,6 +651,10 @@ img {
   .navbar-collapse ul li a {
     margin-left: 29px;
   }
+  .product-card {
+    padding: 0;
+  }
+
 }
 @media only screen and (max-width: 1200px) {
   .navbar-collapse ul li a {
