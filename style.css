@@ -822,7 +822,8 @@ img {
 @media screen and (max-width: 378px) {
   .banner-left h1 {
     line-height: 30px;
-    font-size: 20px;
+    font-size: 25px;
+    padding-top: 10%;
   }
 }
 @media screen and (max-width: 290px) {
