@@ -32,10 +32,8 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
-
   </head>
   <body>
-
     <section class="pre-wraper preloader">
       <div class="wrapperanimate">
         <div class="circle"></div>
@@ -579,6 +577,10 @@
     </footer>
 
     <script>
+      $(document).ready(function () {
+        $(".preloader").fadeOut();
+      });
+
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -615,13 +617,6 @@
           clickable: true,
         },
       });
-
-      $(document).ready(function () {
-        setTimeout(function () {
-          $(".preloader").fadeOut();
-        }, 1500); // Adjust the delay time (in milliseconds) as needed
-      });
-
     </script>
 
     <script
