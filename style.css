@@ -4,10 +4,103 @@
   padding: 0 20px;
   margin: 0 auto;
 }
+.wrapperanimate {
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle 0.5s alternate infinite ease;
+}
+
+@keyframes circle {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0%;
+  }
+}
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow 0.5s alternate infinite ease;
+}
+
+@keyframes shadow {
+  0% {
+    transform: scaleX(1.5);
+  }
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleX(0.2);
+    opacity: 0.4;
+  }
+}
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+.wrapperanimate span {
+  position: absolute;
+  top: 75px;
+  font-family: "Lato";
+  font-size: 20px;
+  letter-spacing: 12px;
+  color: #fff;
+  left: 15%;
+}
+.pre-wraper {
+  background: linear-gradient(180deg, #b5e8d7 60.26%, #ffffff 103.4%);
+  height: 100vh;
+  width: 100%;
+}
 
 .iland-navbar {
   padding: 20px 0 100px 0;
-  /* background: linear-gradient(180deg, #B5E8D7 40.26%, #FFFFFF 103.46%); */
 }
 .iland-home-logo {
   width: 20%;
@@ -35,8 +128,6 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  /* bottom: 30px; */
-  /* padding-bottom: 100px; */
 }
 .banner-left {
   width: 60%;
@@ -137,8 +228,8 @@
 .latst-product a {
   text-decoration: none;
 }
-.latstpro-img{
-    height: 160px;
+.latstpro-img {
+  height: 160px;
 }
 .latstpro-img img {
   object-fit: cover;
@@ -178,7 +269,6 @@
     #b5e8d7 0%,
     #ffffff 100%
   );
-  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
   padding: 90px 0;
 }
 .iphone-section:hover {
@@ -205,6 +295,7 @@
   height: 190px;
   margin-top: 32px;
 }
+
 .ultra-txt {
   height: 64px !important;
 }
@@ -252,8 +343,8 @@
   );
   padding-bottom: 80px;
 }
-.lst-chs-slider{
-    background: radial-gradient(
+.lst-chs-slider {
+  background: radial-gradient(
     169.84% 509.04% at -32.64% 50.06%,
     #b5e8d7 0%,
     #ffffff 44.95%,
@@ -267,12 +358,10 @@ img {
   vertical-align: middle;
 }
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
-  /* padding: 100px 20px; */
 }
 
 /* Caption text */
@@ -324,16 +413,16 @@ img {
     opacity: 1;
   }
 }
-.d-flex{
-    position: relative;
+.d-flex {
+  position: relative;
 }
-.search-icon{
-    position: absolute;
-    left: 236px;
-    border: none;
-    background: white;
-    top: 5px;
-    color: #BEBEBE;
+.search-icon {
+  position: absolute;
+  left: 236px;
+  border: none;
+  background: white;
+  top: 5px;
+  color: #bebebe;
 }
 
 .autoslid-section {
@@ -413,8 +502,10 @@ img {
 .ftr-cntents {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 90px 20px 10px 20px;
 }
+
 .ftr-cntents ul li {
   list-style: none;
   padding-bottom: 5px;
@@ -524,32 +615,37 @@ img {
   font-size: 17px;
   padding: 30px 0 20px 0;
 }
-#scd-frm{
+#scd-frm {
   display: none !important;
 }
 
-.swiper-button-next:after{
+.swiper-button-next:after {
   font-size: 20px !important;
-  
 }
-.swiper-button-prev:after{
+.swiper-button-prev:after {
   font-size: 20px !important;
-
 }
-#cnct-only{
+#cnct-only {
   display: none;
 }
 
 /* Responsive */
 @media only screen and (min-width: 992px) {
-
   .iland-navbar {
-    background: linear-gradient(180deg, #B5E8D7 40.26%, #FFFFFF 103.46%)  }
-    .our-latst-prdct{
-      padding-top: 10%;
-    }
+    background: linear-gradient(180deg, #b5e8d7 40.26%, #ffffff 103.46%);
+  }
+  .our-latst-prdct {
+    padding-top: 10%;
+  }
+  .iphn-fifty {
+    height: 270px !important;
+  }
 }
-
+@media only screen and (max-width: 992px) and (min-width: 700px) {
+  .search-icon {
+    left: 90% !important;
+  }
+}
 
 @media only screen and (max-width: 1400px) and (min-width: 1200px) {
   .navbar-collapse ul li a {
@@ -563,44 +659,48 @@ img {
 }
 
 @media only screen and (max-width: 992px) {
-  .menu-banner-wraper{
-    background: linear-gradient(180deg, #B5E8D7 40.26%, #FFFFFF 103.46%);
+  .menu-banner-wraper {
+    background: linear-gradient(180deg, #f9fdfc 10.5%, #b5e8d7 50%);
     height: 100vh;
-  
+  }
+  .ltst-sctn-parent {
+    background: linear-gradient(180deg, #b5e8d7 23.5%, #f9fdfc 100%);
+  }
+  .latst-product {
+    background-color: white;
   }
 
-  #scd-frm{
+  #scd-frm {
     display: block !important;
-    width: 80%;
+    width: 95%;
   }
-  #frst-frm{
+  #frst-frm {
     display: none !important;
   }
-  .cmpny-lg-right{
+  .cmpny-lg-right {
     display: none;
   }
   .iland-navbar {
-    padding-top:35px;
-    /* background: #B5E8D7 !important; */
     padding-bottom: 0px;
+    padding-top: 15px;
   }
-  .iland-home-logo{
+  .iland-home-logo {
     position: relative;
     left: 40%;
   }
-  button.navbar-toggler{
+  button.navbar-toggler {
     border: none;
     position: relative;
     right: 90%;
   }
-  .branches-title{
+  .branches-title {
     padding: 0;
     position: absolute;
     left: 70%;
     bottom: 104%;
     font-size: 10px;
   }
-  
+
   .banner-wraper {
     flex-direction: column-reverse;
     align-items: center;
@@ -617,26 +717,26 @@ img {
   .banner-left h1 {
     text-align: center;
     padding-top: 15%;
-    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
   }
-  .trusted-text{
+  .trusted-text {
     display: none;
   }
-  .branches-btn{
+  .branches-btn {
     display: none;
   }
-  .branch-list{
+  .branch-list {
     justify-content: space-around;
     padding-top: 24px;
     padding-bottom: 10px;
   }
-  .branch-list h4{
+  .branch-list h4 {
     font-size: 10px;
   }
-  .branch-list p{
+  .branch-list p {
     font-size: 10px;
   }
- 
+
   .banner-right {
     width: 100%;
     margin-top: 0;
@@ -653,16 +753,25 @@ img {
 @media screen and (max-width: 991px) {
   .product-card {
     flex: 0 0 50%; /* 2 cards visible at a time */
-    /* max-width: 50%; */
   }
 }
 @media screen and (max-width: 768px) {
-  .banner-left h1{
-    font-size: 40px;
+  .banner-left h1 {
+    font-size: 32px;
+    line-height: 50px;
+  }
+  .list-wraper {
+    width: calc(50% - 20px);
+  }
+  #our-values-div {
+    display: none;
+  }
+  .ftr-cntents {
+    padding: 60px 20px 10px 20px;
   }
 }
 @media screen and (max-width: 535px) {
-  .our-latst-prdct{
+  .our-latst-prdct {
     text-align: center;
     font-weight: 700;
   }
@@ -672,47 +781,48 @@ img {
   .latstpro-img img {
     width: 100px;
   }
-  .latstpro-img{
+  .latstpro-img {
     height: 120px;
   }
-  .latstpro-title h3{
+  .latstpro-title h3 {
     font-size: 13px;
   }
-  .latstpro-watsap p{
+  .latstpro-watsap p {
     padding-left: 10px;
   }
-  #cnct-us{
+  #cnct-us {
     display: none;
   }
-  #cnct-only{
+  #cnct-only {
     display: block;
   }
-  .latstpro-title h3{
+  .latstpro-title h3 {
     padding: 13px 0 11px 0;
   }
 }
 @media screen and (max-width: 494px) {
-  .banner-left h1{
-    font-size: 35px;
+  .banner-left h1 {
+    font-size: 27px;
+    line-height: 40px;
   }
 }
 @media screen and (max-width: 435px) {
-  .banner-left h1{
-    font-size: 30px;
+  .banner-left h1 {
+    font-size: 25px;
+    line-height: 40px;
   }
 }
 @media screen and (max-width: 378px) {
-  .banner-left h1{
-    font-size: 26px;
+  .banner-left h1 {
+    line-height: 30px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 290px) {
-  .ornge-watch{
+  .ornge-watch {
     width: 100%;
   }
 }
-
-
 
 @media screen and (max-width: 770px) {
   .product-card {
@@ -733,13 +843,6 @@ img {
     padding-left: 0;
   }
 }
-/* @media screen and (max-width: 600px) {
-    .latst-product{
-        width: 60%;
-        margin-left: 20%;
-    }
-} */
-
 @media screen and (max-width: 1040px) {
   .autoslid-section {
     padding: 50px 35px;
@@ -749,8 +852,8 @@ img {
   .form-control {
     padding: 6px 10px 7px 18px !important;
   }
-  .search-icon{
-    left: 180px;
+  .search-icon {
+    left: 85%;
   }
 }
 
@@ -761,44 +864,44 @@ img {
   .color-defne-section {
     width: 60%;
   }
-  .prdct-descrptn{
+  .prdct-descrptn {
     display: none;
   }
-  .left-prdct-dtls h4{
+  .left-prdct-dtls h4 {
     padding-top: 13px;
     font-size: 17px;
   }
-  .airpod-pro-btn{
+  .airpod-pro-btn {
     font-size: 14px;
   }
-  .right-prdct-img img{
-    width: 80% ;
+  .right-prdct-img img {
+    width: 80%;
   }
-  .clr1{
+  .clr1 {
     height: 15px;
     width: 15px;
   }
-  .clr2{
+  .clr2 {
     height: 15px;
     width: 15px;
   }
-  .clr3{
+  .clr3 {
     height: 15px;
     width: 15px;
   }
-  .clr4{
+  .clr4 {
     height: 15px;
     width: 15px;
   }
-  .clr5{
+  .clr5 {
     height: 15px;
     width: 15px;
   }
-  .clr6{
+  .clr6 {
     height: 15px;
     width: 15px;
   }
-  .iphone-section{
+  .iphone-section {
     padding: 60px 0;
   }
 }
@@ -808,14 +911,24 @@ img {
   }
 }
 @media screen and (max-width: 560px) {
-  
   .iphone-section h3 {
     font-size: 30px;
   }
   .ultra-txt {
     height: 55px !important;
   }
-  .iland-Product h5{
+  .iland-Product h5 {
     font-size: 17px;
+  }
+  .ftr-contact p {
+    text-align: center;
+  }
+  .prvcy-policy {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 383px) {
+  .product-card {
+    padding: 0;
   }
 }
